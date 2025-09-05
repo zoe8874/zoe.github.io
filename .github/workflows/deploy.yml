@@ -1,4 +1,4 @@
-name: Mein erster Workflow
+name:  Workflow
 
 on: [push]
 
@@ -9,5 +9,4 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v4
 
-      - name: Hallo Welt ausführen
-        run: echo "Hallo GitHub Actions, das ist mein erster Workflow!"
+      
