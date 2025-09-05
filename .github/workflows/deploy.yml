@@ -1,29 +1,13 @@
-name: Deploy to GitHub Pages
+name: Mein erster Workflow
 
-on:
-  push:
-    branches: [main]
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+on: [push]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Repository auschecken
         uses: actions/checkout@v4
 
-      - name: Set up GitHub Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload website artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+      - name: Hallo Welt ausführen
+        run: echo "Hallo GitHub Actions, das ist mein erster Workflow!"
